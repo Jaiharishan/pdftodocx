@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 
 // body parser
 app.use(express.json());
-app.use(express.urlencoded({limit: '50mb', extended: false}));
+app.use(express.urlencoded({extended: false}));
 
 // to use static files like imgs css, js files
 app.use(express.static('public'));
@@ -20,5 +20,5 @@ const indexRouter = require('./routes/index');
 app.use('/', indexRouter);
 
 // setting and listening to ports
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, ()=> console.log(`port is on ${PORT}`));

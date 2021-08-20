@@ -1,1 +1,30 @@
-<h1>hi</h1>
+<section class="p-5">
+    <div class="display-4 text-center">PDF - DOCX Convertor</div>
+</section>
+
+<section class="p-5">
+    <div class="container d-flex align-items-center justify-content-center flex-wrap">
+        <div class="card p-2 m-5" style="width: 18rem;">
+            <div class="display-6 text-center">PDF</div>
+            <div class="display-6 text-center">to</div>
+            <div class="display-6 text-center">WORD</div>
+
+            <form action="/toword" class="mt-3 px-2 d-flex flex-column align-items-center"
+             enctype="multipart/form-data" method="POST">
+                <input type="file" required class="form-control" name="pdf" id="pdf">
+                <button type="submit" formaction="/toword" class="btn btn-primary mt-3 text-light">covert to word</button>
+            </form>
+        </div>
+        <div class="card p-2 m-5" style="width: 18rem;">
+            <div class="display-6 text-center">WORD</div>
+            <div class="display-6 text-center">to</div>
+            <div class="display-6 text-center">PDF</div>
+
+            <form action="/topdf" class="mt-3 px-2 d-flex flex-column align-items-center"
+             enctype="multipart/form-data" method="POST">
+                <input type="file" required class="form-control" name="word" id="word">
+                <button type="submit" formaction="/topdf" class="btn btn-primary mt-3 text-light">covert to pdf</button>
+            </form>
+        </div>
+    </div>
+</section>
